@@ -196,7 +196,7 @@ function buyCart(db){
         }
         const response = Swal.fire({
             title: 'Su comprar fue exitosa?',
-            confirmButtonText: 'comprar',
+            confirmButtonText: 'excelente',
             confirmButtonColor:'green',
             icon:'success',
             iconColor:'green', 
@@ -306,10 +306,29 @@ function modal_product(db){
                     <img src='${productFind.image}' alt='image product'/>
                 </div>
                 <div class='modal_group'>
-                    <h3><span>Nombre: </span>${productFind.name}</h3>
+                    <h2 class= "modal_title">${productFind.name}</h2><br>
                     <h3><span>Descripcion: </span>${productFind.description}</h3><br>
-                    <h3><span>Categoria: </span>${productFind.category}</h3>
-                    <h3><span>Precio: </span>$${productFind.price} | <span>Stock: </span>${productFind.quantity}</h3>
+                    <h3><span>Categoria: </span>${productFind.category}</h3><br>
+                    <h3><span>Precio: </span>$${productFind.price} | <span>Stock: </span>${productFind.quantity}</h3><br>
+                </div>
+                <div class='size'>
+                    <h3>Tallas</h3><br>
+                    <ul class= "size_list">
+                        <li class="list-size">S</li>
+                        <li class="list-size">M</li>
+                        <li class="list-size">L</li>
+                        <li class="list-size">XL</li>
+                        <li class="list-size">XXL</li>
+                        <li class="list-size">XXXL</li>
+                    </ul>
+                    <h3 class="color_title">Colores</h3><br>
+                    <ul class= "colors_list">
+                        <li class="list-color one">red</li>
+                        <li class="list-color two">blue</li>
+                        <li class="list-color three">green</li>
+                        <li class="list-color four">grey</li>
+                        <li class="list-color five">pink</li>
+                    </ul>
                 </div>    
             `
             modal.classList.add('active');
